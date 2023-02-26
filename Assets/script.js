@@ -4,19 +4,19 @@
 $(function () {
   // let saveBtnEl = document.getElementsByClassName(".saveBtn");
   let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
-  let containerEl = document.getElementsByClassName(".container")
+  let containerEl = document.getElementsByClassName(".container");
   
   // Create Calendar Time Blocks and Columns
-  function createTimeBlocks() {
-    for (i = 0; i < workHoursArr.length; i++) {
-      let row = $("<div>").addClass("row time-block");
-      let timeCol = $("<div>").addClass("hour").text(workHoursArr[i]);
-      let inputCol = $("<textarea>").addClass("description").attr("placeholder", "Type event info here!");
-      let saveBtn = $("<button>").addClass("saveBtn").text("save");
-      $(row).append(timeCol).append(inputCol).append(saveBtn);
-      $(containerEl).append(row);
-    }
-  }
+  // function createTimeBlocks() {
+  //   for (i = 0; i < workHoursArr.length; i++) {
+  //     let row = $("<div>").addClass("row time-block");
+  //     let timeCol = $("<div>").addClass("hour").text(workHoursArr[i]);
+  //     let inputCol = $("<textarea>").addClass("description").attr("placeholder", "Type event info here!");
+  //     let saveBtn = $("<button>").addClass("saveBtn").text("save");
+  //     $(row).append(timeCol).append(inputCol).append(saveBtn);
+  //     $(containerEl).append(row);
+  //   }
+  // }
 
   createTimeBlocks();
 
@@ -37,10 +37,13 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+
   //
   // TODO: Add code to display the current date in the header of the page.
   let today = dayjs();
