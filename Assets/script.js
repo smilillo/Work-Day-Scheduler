@@ -33,7 +33,6 @@ $(function () {
   function checkCurrentHour() {
     // Gets current hour
     let currentHour = dayjs().hour();
-    console.log(currentHour);
 
     // Split hour from each time-block id as an integer to compare to current hour
     $(".time-block").each(function () {
