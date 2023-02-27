@@ -34,6 +34,7 @@ $(function () {
     // Gets current hour
     let currentHour = dayjs().hour();
 
+
     // Split hour from each time-block id as an integer to compare to current hour
     $(".time-block").each(function () {
       let blockHour = parseInt($(this).attr("id").split("-")[1]);
