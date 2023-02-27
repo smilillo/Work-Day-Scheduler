@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  let saveBtnEl = document.getElementsByClassName("saveBtn");
+  // let saveBtnEl = document.getElementsByClassName("saveBtn");
   // let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
   // let containerEl = document.getElementsByClassName("timeblockContainer");
   
@@ -27,9 +27,15 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-    // saveBtnEl.addEventListener("click", function(event) {
+    $(".saveBtn").on("click", function(event) {
+      event.preventDefault();
+      let timeBlock = $(this).parent().attr("id");
+      let taskInfo = $(this).siblings("textarea").val();
 
-    // })
+      // Save time and description together in local storage
+      localStorage.setItem(timeBlock, taskInfo);
+
+    })
 
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -37,6 +43,7 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+
   function checkCurrentHour() {
     // Gets current hour
     let currentHour = dayjs().format(H);
@@ -70,6 +77,7 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
+  
   //
   // TODO: Add code to display the current date in the header of the page.
   let today = dayjs();
