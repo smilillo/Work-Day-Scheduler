@@ -15,6 +15,7 @@ This page can be used to schedule events in your day using hourly blocks. To add
 https://smilillo.github.io/Work-Day-Scheduler/
 
 ### Screenshot
+![_Users_sofiamilillo_Documents_bootcampOSU_Work-Day-Scheduler_index html](https://user-images.githubusercontent.com/121981411/221465559-5cef3674-05a4-49d4-b8db-99e366e2b961.png)
 
 
 ## License
