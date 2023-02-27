@@ -46,7 +46,8 @@ $(function () {
 
   function checkCurrentHour() {
     // Gets current hour
-    let currentHour = dayjs().format(H);
+    let currentHour = dayjs().hour();
+    console.log(currentHour);
 
     // Split hour from each time-block id as an integer to compare to current hour
     $(".time-block").each(function () {
@@ -68,19 +69,19 @@ $(function () {
       $(this).removeClass("past");
       $(this).addClass("future");
     }
-    })
+    });
   }
-  checkCurrentHour;
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
-  
   //
   // TODO: Add code to display the current date in the header of the page.
   let today = dayjs();
   $("#currentDay").text(today.format("dddd, MMMM D"));
+
+  checkCurrentHour();
 });
 
