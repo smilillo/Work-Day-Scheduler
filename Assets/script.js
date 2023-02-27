@@ -25,7 +25,7 @@ $(function () {
       let timeBlock = $(this).parent().attr("id");
       let taskInfo = $(this).siblings("textarea").val();
 
-      // Save time and description together in local storage
+      // Save time block id and description together in local storage
       localStorage.setItem(timeBlock, taskInfo);
     })
 
