@@ -4,7 +4,7 @@
 $(function () {
   // let saveBtnEl = document.getElementsByClassName("saveBtn");
   let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
-  let containerEl = document.getElementsByClassName("timeblockCcontainer");
+  let containerEl = document.getElementsByClassName("timeblockContainer");
   
   // Create Calendar Time Blocks and Columns
   function createTimeBlocks() {
