@@ -10,9 +10,9 @@ $(function () {
   // function createTimeBlocks() {
   //   for (i = 0; i < workHoursArr.length; i++) {
   //     let row = $("div").addClass("row time-block");
-  //     let timeCol = $("div").addClass("hour").text(workHoursArr[i]);
-  //     let inputCol = $("textarea").addClass("description").attr("placeholder", "Type event info here!");
-  //     let saveBtn = $("button").addClass("saveBtn").text("save");
+  //     let timeCol = $("div").addClass("hour col-2 col-md-1 text-center py-3").text(workHoursArr[i]);
+  //     let inputCol = $("textarea").addClass("description col-8 col-md-10").attr("placeholder", "Type event info here!");
+  //     let saveBtn = $("button").addClass("saveBtn btn col-2 col-md-1").text("save");
   //     $(row).append(timeCol).append(inputCol).append(saveBtn);
   //     $(containerEl).append(row);
   //   }
@@ -27,7 +27,7 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-    // saveBtnEl.addEventListener("click", function() {
+    // saveBtnEl.addEventListener("click", function(event) {
 
     // })
 
@@ -38,9 +38,32 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   function checkCurrentHour() {
+    // Gets current hour
     let currentHour = dayjs().format(H);
 
+    // Split hour from each time-block id as an integer to compare to current hour
+    $(".time-block").each(function () {
+      let blockHour = parseInt($(this).attr("id").split("-")[1]);
+    
+    // If statement to assign past, present, or future
+    if (blockHour < currentHour) {
+      $(this).removeClass("present");
+      $(this).removeClass("future");
+      $(this).addClass("past");
+    } 
+    else if (blockHour === currentHour) {
+      $(this).removeClass("past");
+      $(this).removeClass("future");
+      $(this).addClass("present");
+    }
+    else {
+      $(this).removeClass("present");
+      $(this).removeClass("past");
+      $(this).addClass("future");
+    }
+    })
   }
+  checkCurrentHour;
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
