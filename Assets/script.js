@@ -2,21 +2,21 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  // let saveBtnEl = document.getElementsByClassName("saveBtn");
-  let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
-  let containerEl = document.getElementsByClassName("timeblockContainer");
+  let saveBtnEl = document.getElementsByClassName("saveBtn");
+  // let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+  // let containerEl = document.getElementsByClassName("timeblockContainer");
   
   // Create Calendar Time Blocks and Columns
-  function createTimeBlocks() {
-    for (i = 0; i < workHoursArr.length; i++) {
-      let row = $("<div>").addClass("row time-block");
-      let timeCol = $("<div>").addClass("hour").text(workHoursArr[i]);
-      let inputCol = $("<textarea>").addClass("description").attr("placeholder", "Type event info here!");
-      let saveBtn = $("<button>").addClass("saveBtn").text("save");
-      $(row).append(timeCol).append(inputCol).append(saveBtn);
-      $(containerEl).append(row);
-    }
-  }
+  // function createTimeBlocks() {
+  //   for (i = 0; i < workHoursArr.length; i++) {
+  //     let row = $("div").addClass("row time-block");
+  //     let timeCol = $("div").addClass("hour").text(workHoursArr[i]);
+  //     let inputCol = $("textarea").addClass("description").attr("placeholder", "Type event info here!");
+  //     let saveBtn = $("button").addClass("saveBtn").text("save");
+  //     $(row).append(timeCol).append(inputCol).append(saveBtn);
+  //     $(containerEl).append(row);
+  //   }
+  // }
 
   // createTimeBlocks();
 
