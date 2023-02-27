@@ -60,9 +60,10 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 // Get user input from localStorage and set to time-block descriptions
-$("textarea").each(function() {
-  $(this).val(localStorage.getItem(taskInfo));
-})
+  $("textarea").each(function() {
+    $(this).val(localStorage.getItem($(this).taskInfo))
+  });
+  console.log("textarea".val);
 
 
 // Display the current date in the header of the page.
