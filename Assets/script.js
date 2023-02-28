@@ -3,21 +3,6 @@
 // in the html.
 dayjs.extend(window.dayjs_plugin_advancedFormat);
 $(function () {
-  // let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
-  // let containerEl = document.getElementsByClassName("timeblockContainer");
-  
-// Failed attempt at creating time blocks using jquery
-  // Create Calendar Time Blocks and Columns
-  // function createTimeBlocks() {
-  //   for (i = 0; i < workHoursArr.length; i++) {
-  //     let row = $("div").addClass("row time-block");
-  //     let timeCol = $("div").addClass("hour col-2 col-md-1 text-center py-3").text(workHoursArr[i]);
-  //     let inputCol = $("textarea").addClass("description col-8 col-md-10").attr("placeholder", "Type event info here!");
-  //     let saveBtn = $("button").addClass("saveBtn btn col-2 col-md-1").text("save");
-  //     $(row).append(timeCol).append(inputCol).append(saveBtn);
-  //     $(containerEl).append(row);
-  //   }
-  // }
 
 // Event listener for save button click to save time-block id and description to local storage
     $(".saveBtn").on("click", function(event) {
@@ -72,3 +57,20 @@ $(function () {
 
 });
 
+
+// Failed attempt at creating time blocks using jquery
+// Keeping for now because I would like to return to it at a later date
+  // let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+  // let containerEl = document.getElementsByClassName("timeblockContainer");
+  
+  // Create Calendar Time Blocks and Columns
+  // function createTimeBlocks() {
+  //   for (i = 0; i < workHoursArr.length; i++) {
+  //     let row = $("div").addClass("row time-block");
+  //     let timeCol = $("div").addClass("hour col-2 col-md-1 text-center py-3").text(workHoursArr[i]);
+  //     let inputCol = $("textarea").addClass("description col-8 col-md-10").attr("placeholder", "Type event info here!");
+  //     let saveBtn = $("button").addClass("saveBtn btn col-2 col-md-1").text("save");
+  //     $(row).append(timeCol).append(inputCol).append(saveBtn);
+  //     $(containerEl).append(row);
+  //   }
+  // }
