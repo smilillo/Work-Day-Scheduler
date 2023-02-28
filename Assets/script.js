@@ -1,7 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-
+dayjs.extend(window.dayjs_plugin_advancedFormat);
 $(function () {
   // let workHoursArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
   // let containerEl = document.getElementsByClassName("timeblockContainer");
@@ -32,7 +32,8 @@ $(function () {
 // Checks current hour against time-block hour to set background for past, present, or future events
   function checkCurrentHour() {
     // Gets current hour
-    let currentHour = dayjs().hour();
+    // let currentHour = dayjs().hour();
+    let currentHour = 10;
 
 
     // Split hour from each time-block id as an integer to compare to current hour
@@ -63,7 +64,7 @@ $(function () {
   });
 
 
-// Display the current date in the header of the page.
+// Display the current date in the header of the page. 
   let today = dayjs();
   $("#currentDay").text(today.format("dddd, MMMM Do"));
 
