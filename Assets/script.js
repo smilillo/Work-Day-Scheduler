@@ -17,9 +17,7 @@ $(function () {
 // Checks current hour against time-block hour to set background for past, present, or future events
   function checkCurrentHour() {
     // Gets current hour
-    // let currentHour = dayjs().hour();
-    let currentHour = 10;
-
+    let currentHour = dayjs().hour();
 
     // Split hour from each time-block id as an integer to compare to current hour
     $(".time-block").each(function () {
