@@ -52,9 +52,6 @@ $(function () {
 // Display the current date in the header of the page. 
   let today = dayjs();
   $("#currentDay").text(today.format("dddd, MMMM Do"));
-
-  // need to ask about advanced format to add ordinal after day of month
-
 });
 
 
